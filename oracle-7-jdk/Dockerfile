@@ -1,6 +1,6 @@
-FROM centos:7
+FROM centos:6
 
-MAINTAINER nimmis <kjell.havneskold@gmail.com>
+MAINTAINER wsw0108 <wsw0108@foxmail.com>
 
 RUN yum update -y && \
 yum install -y wget && \
@@ -13,7 +13,8 @@ rm -rf /var/cache/yum
 ENV HOME /root
 
 # Define working directory.
-WORKDIR /root
+WORKDIR /data
+VOLUME /data
 
 # Define default command.
 CMD ["bash"]

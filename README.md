@@ -1,17 +1,17 @@
-## Java with CentOS 7
+## Java with CentOS 6
 
-This is docker images of CentOS 7 with different versions of java
+This is docker images of CentOS 6 with different versions of java
+> Fork from https://github.com/nimmis/docker-java-centos
 
 ### Loading different versions of java
 
-The different version is determined with the TAG 
+The different version is determined with the TAG
 
-The available version are 
+The available version are
 
 * latest                 - currently Oracle Java version 9 JRE
 * openjdk-7-jdk          - OpenJDK Java version 7 JDK
 * openjdk-7-jre          - OpenJDK Java version 7 JRE
-* openjdk-7-jre-headless - OpenJDK Java version 7 JRE headless
 * openjdk-8-jdk          - OpenJDK Java version 8 JDK
 * openjdk-8-jre          - OpenJDK Java version 8 JRE
 * openjdk-8-jre-headless - OpenJDK Java version 8 JRE headless
@@ -24,6 +24,4 @@ The available version are
 
 Example to run a container with OpenJDK version 7 JDK
 
-	`docker run -ti nimmis/java-centos:openjdk-7-jdk`
-
-
+  `docker run -ti wsw0108/java-centos6:openjdk-7-jdk`

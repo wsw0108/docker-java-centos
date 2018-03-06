@@ -1,11 +1,11 @@
-FROM centos:7
+FROM centos:6
 
-MAINTAINER nimmis <kjell.havneskold@gmail.com>
+MAINTAINER wsw0108 <wsw0108@foxmail.com>
 
 ENV JAVA_VERSION_MAJOR=8 \
-    JAVA_VERSION_MINOR=144 \
-    JAVA_VERSION_BUILD=01 \
-    JAVA_URL_HASH=090f390dda5b47b9b721c7dfaa008135 
+    JAVA_VERSION_MINOR=161 \
+    JAVA_VERSION_BUILD=12 \
+    JAVA_URL_HASH=2f38c3b165be4555a1fa6e98c45e0808
 
 RUN yum update -y && \
 yum install -y wget && \
@@ -20,7 +20,8 @@ rm -rf /var/cache/yum
 ENV HOME /root
 
 # Define working directory.
-WORKDIR /root
+WORKDIR /data
+VOLUME /data
 
 # Define default command.
 CMD ["bash"]
